@@ -8,10 +8,11 @@
     "start": "node servers/server.js",
     "server": "nodemon servers/server.js",
     "client": "npm run start --prefix clients",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "engines": {
-    "node": "10.15.3"
+    "node": "12.11.1"
   },
   "author": "",
   "license": "ISC",

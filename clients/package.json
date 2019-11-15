@@ -28,6 +28,9 @@
     "redux-thunk": "^2.3.0",
     "typescript": "^3.4.5"
   },
+  "engines": {
+    "node": "12.11.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

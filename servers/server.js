@@ -172,7 +172,13 @@ app.delete('/api/delete_book', (req, res)=>{
     })
 })
 
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static('client/build'))
+    res.sendFile(path.resolve(--__dirname, "client", "build", "index.html"))
+}
+
 const port = process.env.PORT ||3001;
+
 
 app.listen(port, () =>{
     console.log(`App now listen to port`)

@@ -84,7 +84,7 @@ userSchema.statics.findByToken = function(token, cb){
 }
 
 //method to delete token from database so that uer can be logout
-userSchema.methods.deleteToken = function(tojen, cb){
+userSchema.methods.deleteToken = function(token, cb){
     var user = this;
     user.update({$unset:{token: 1}}, (err, user)=>{
         if(err) return cb(err);
